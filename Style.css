@@ -1,0 +1,175 @@
+ /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* PAGE */
+body {
+  background-color: #bff5da;
+  height: 100vh;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT IMAGE */
+.image-section {
+  flex: 1;
+  overflow: hidden;
+}
+
+.image-section img {
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+}
+
+/* RIGHT CONTENT */
+.content-section {
+  flex: 1;
+  background-color: #bff5da;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+
+.content {
+  max-width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* TEXT */
+.logo {
+  font-size: 2.2rem;
+  color: #0a2a43;
+  margin-bottom: 30px;
+}
+
+.headline {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #0a2a43;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #123a4a;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.cta {
+  padding: 14px 28px;
+  background-color: #9fc8ff;
+  border: none;
+  border-radius: 6px;
+  color: #0a2a43;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #86b6ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .image-section {
+    height: 45vh;
+  }
+
+  .content-section {
+    padding: 40px;
+  }
+}
+/*_________________________________________________________________________*/
+/* sIGN IN  */
+
+/* Full background image */
+.background {
+  min-height: 100vh;
+  background: url("4.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glass-style card */
+.auth-card {
+  width: 700px;
+  padding: 40px;
+  border-radius: 12px;
+  background: rgba(190, 245, 218, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Logo */
+.auth-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-logo h1 {
+  font-size: 1.8rem;
+  color: #0a2a43;
+}
+
+/* Form layout */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-form label {
+  font-size: 0.85rem;
+  color: #0a2a43;
+}
+
+.auth-form input {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(10,42,67,0.3);
+  background: transparent;
+  outline: none;
+}
+
+/* Full-width button */
+.full-width {
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* Privacy text */
+.privacy-text {
+  font-size: 0.75rem;
+  text-align: center;
+  color: #0a2a43;
+  opacity: 0.8;
+}
+
+/* Login link */
+.login-link {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #0a2a43;
+  text-decoration: underline;
+}
