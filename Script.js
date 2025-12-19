@@ -7,3 +7,16 @@
     content.style.transform = "translateY(0)";
   }, 300);
 });
+//_______________________________________________
+
+function saveName() {
+  const name = document.getElementById("fullName").value;
+
+  // Save name
+  localStorage.setItem("userFullName", name);
+
+  // Redirect
+  window.location.href = "main.html";
+
+  return false; // 🔥 PREVENT form refresh
+}

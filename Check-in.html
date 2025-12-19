@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StillPoint- Check-In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="logo-box">
+      <img src="logo.png" alt="Stillpoint logo">
+    </div>
+
+    <nav class="nav">
+      <a>Home</a>
+      <a class="active">Check-In</a>
+      <a>History</a>
+      <a>About</a>
+    </nav>
+
+    <footer class="sidebar-footer">
+      <small>copyright<br>signature with<br>year</small>
+    </footer>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- TOP BAR -->
+ <header class="top-bar">
+  Welcome <span id="welcomeName"></span>
+</header>
+
+    <!-- HERO IMAGE -->
+    <section class="hero">
+
+      <img src="main.jpg" alt="Calm landscape">
+ 
+        <!-- CHECK-IN FORM -->
+         <div class="checkin-container">
+
+  <h1>Daily Check-In</h1>
+  <p class="subtitle">Take a moment to notice how you’re feeling today.</p>
+
+  <form id="checkinForm">
+
+    <!-- 1 -->
+    <label>1. How would you describe your mood right now?</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Very calm</option>
+      <option>Calm</option>
+      <option>Neutral</option>
+      <option>Stressed</option>
+      <option>Overwhelmed</option>
+    </select>
+
+    <!-- 2 -->
+    <label>2. How anxious do you feel?</label>
+    <input type="range" min="0" max="10">
+    <span class="range-label">0 = None · 10 = Very high</span>
+
+    <!-- 3 -->
+    <label>3. How is your energy level?</label>
+    <input type="range" min="0" max="10">
+    <span class="range-label">0 = Drained · 10 = Energized</span>
+
+    <!-- 4 -->
+    <label>4. Did you sleep well last night?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="sleep" required> Yes</label>
+      <label><input type="radio" name="sleep"> Somewhat</label>
+      <label><input type="radio" name="sleep"> No</label>
+    </div>
+
+    <!-- 5 -->
+    <label>5. How focused do you feel today?</label>
+    <input type="range" min="0" max="10">
+
+    <!-- 6 -->
+    <label>6. Have you felt stressed today?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="stress" required> Not at all</label>
+      <label><input type="radio" name="stress"> A little</label>
+      <label><input type="radio" name="stress"> A lot</label>
+    </div>
+
+    <!-- 7 -->
+    <label>7. How connected do you feel to others today?</label>
+    <input type="range" min="0" max="10">
+
+    <!-- 8 -->
+    <label>8. What’s been on your mind the most today?</label>
+    <textarea rows="3" placeholder="Optional"></textarea>
+
+    <!-- 9 -->
+    <label>9. Did you take time for yourself today?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="selfcare"> Yes</label>
+      <label><input type="radio" name="selfcare"> A little</label>
+      <label><input type="radio" name="selfcare"> Not yet</label>
+    </div>
+
+    <!-- 10 -->
+    <label>10. One word that best describes today:</label>
+    <input type="text" placeholder="e.g. peaceful, heavy, hopeful">
+
+    <button type="submit">Complete Check-In</button>
+
+  </form>
+
+</div>
+
+<script src="checkin.js"></script>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
