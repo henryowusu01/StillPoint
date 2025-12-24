@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StillPoint- Check-In</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style2.css">
 </head>
 <body>
     
@@ -18,7 +18,7 @@
     </div>
 
     <nav class="nav">
-      <a>Home</a>
+      <a href="Main.html">Home</a>
       <a class="active">Check-In</a>
       <a>History</a>
       <a>About</a>
@@ -35,13 +35,13 @@
 
     <!-- TOP BAR -->
  <header class="top-bar">
-  Welcome <span id="welcomeName"></span>
+ Take a quiet moment to notice how you’re feeling <span id="welcomeName"></span>
 </header>
 
     <!-- HERO IMAGE -->
     <section class="hero">
 
-      <img src="main.jpg" alt="Calm landscape">
+      <img src="Rain.jpg" alt="Calm landscape">
  
         <!-- CHECK-IN FORM -->
          <div class="checkin-container">
@@ -51,70 +51,94 @@
 
   <form id="checkinForm">
 
-    <!-- 1 -->
-    <label>1. How would you describe your mood right now?</label>
-    <select required>
-      <option value="">Select</option>
-      <option>Very calm</option>
-      <option>Calm</option>
-      <option>Neutral</option>
-      <option>Stressed</option>
-      <option>Overwhelmed</option>
-    </select>
+  <!-- 1 -->
+  <label>1. How would you describe your mood right now?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="q1" required> Very calm</label>
+    <label><input type="radio" name="q1"> Calm</label>
+    <label><input type="radio" name="q1"> Neutral</label>
+    <label><input type="radio" name="q1"> Stressed</label>
+    <label><input type="radio" name="q1"> Overwhelmed</label>
+  </div>
 
-    <!-- 2 -->
-    <label>2. How anxious do you feel?</label>
-    <input type="range" min="0" max="10">
-    <span class="range-label">0 = None · 10 = Very high</span>
+  <!-- 2 -->
+  <label>2. How anxious do you feel?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="q2" required> Not anxious</label>
+    <label><input type="radio" name="q2"> Slightly anxious</label>
+    <label><input type="radio" name="q2"> Moderately anxious</label>
+    <label><input type="radio" name="q2"> Very anxious</label>
+  </div>
 
-    <!-- 3 -->
-    <label>3. How is your energy level?</label>
-    <input type="range" min="0" max="10">
-    <span class="range-label">0 = Drained · 10 = Energized</span>
+  <!-- 3 -->
+  <label>3. How is your energy level?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="q3" required> Very low</label>
+    <label><input type="radio" name="q3"> Low</label>
+    <label><input type="radio" name="q3"> Balanced</label>
+    <label><input type="radio" name="q3"> High</label>
+  </div>
 
-    <!-- 4 -->
-    <label>4. Did you sleep well last night?</label>
-    <div class="radio-group">
-      <label><input type="radio" name="sleep" required> Yes</label>
-      <label><input type="radio" name="sleep"> Somewhat</label>
-      <label><input type="radio" name="sleep"> No</label>
-    </div>
+  <!-- 4 -->
+  <label>4. Did you sleep well last night?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="q4" required> Yes</label>
+    <label><input type="radio" name="q4"> Somewhat</label>
+    <label><input type="radio" name="q4"> No</label>
+  </div>
 
-    <!-- 5 -->
-    <label>5. How focused do you feel today?</label>
-    <input type="range" min="0" max="10">
+  <!-- 5 -->
+  <label>5. How focused do you feel today?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="q5" required> Very focused</label>
+    <label><input type="radio" name="q5"> Somewhat focused</label>
+    <label><input type="radio" name="q5"> Easily distracted</label>
+  </div>
 
-    <!-- 6 -->
-    <label>6. Have you felt stressed today?</label>
-    <div class="radio-group">
-      <label><input type="radio" name="stress" required> Not at all</label>
-      <label><input type="radio" name="stress"> A little</label>
-      <label><input type="radio" name="stress"> A lot</label>
-    </div>
+  <!-- 6 -->
+  <label>6. Have you felt stressed today?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="q6" required> Not at all</label>
+    <label><input type="radio" name="q6"> A little</label>
+    <label><input type="radio" name="q6"> A lot</label>
+  </div>
 
-    <!-- 7 -->
-    <label>7. How connected do you feel to others today?</label>
-    <input type="range" min="0" max="10">
+  <!-- 7 -->
+  <label>7. How connected do you feel to others today?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="q7" required> Very connected</label>
+    <label><input type="radio" name="q7"> Somewhat connected</label>
+    <label><input type="radio" name="q7"> Disconnected</label>
+  </div>
 
-    <!-- 8 -->
-    <label>8. What’s been on your mind the most today?</label>
-    <textarea rows="3" placeholder="Optional"></textarea>
+  <!-- 8 -->
+  <label>8. What best describes your thoughts today?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="q8" required> Calm and clear</label>
+    <label><input type="radio" name="q8"> Busy</label>
+    <label><input type="radio" name="q8"> Heavy</label>
+    <label><input type="radio" name="q8"> Overthinking</label>
+  </div>
 
-    <!-- 9 -->
-    <label>9. Did you take time for yourself today?</label>
-    <div class="radio-group">
-      <label><input type="radio" name="selfcare"> Yes</label>
-      <label><input type="radio" name="selfcare"> A little</label>
-      <label><input type="radio" name="selfcare"> Not yet</label>
-    </div>
+  <!-- 9 -->
+  <label>9. Did you take time for yourself today?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="q9" required> Yes</label>
+    <label><input type="radio" name="q9"> A little</label>
+    <label><input type="radio" name="q9"> Not yet</label>
+  </div>
 
-    <!-- 10 -->
-    <label>10. One word that best describes today:</label>
-    <input type="text" placeholder="e.g. peaceful, heavy, hopeful">
+  <!-- 10 -->
+  <label>10. Overall, how does today feel?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="q10" required> Good</label>
+    <label><input type="radio" name="q10"> Okay</label>
+    <label><input type="radio" name="q10"> Difficult</label>
+  </div>
 
-    <button type="submit">Complete Check-In</button>
+  <button type="submit">Complete Check-In</button>
 
-  </form>
+</form>
 
 </div>
 

@@ -1,0 +1,194 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* APP LAYOUT */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background-color: #b9f2d6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo-box {
+  width: 140px;
+  height: 140px;
+  background: rgba(255,255,255,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.logo-box img {
+  width: 110px;
+}
+
+/* NAV */
+.nav {
+  width: 100%;
+  text-align: center;
+}
+
+.nav a {
+  display: block;
+  padding: 14px 0;
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.nav a.active {
+  background-color: #9fc8ff;
+  border-radius: 10px;
+  width: 85%;
+  margin: 0 auto 20px;
+}
+
+/* FOOTER */
+.sidebar-footer {
+  margin-top: auto;
+  margin-bottom: 20px;
+  font-size: 0.75rem;
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP BAR */
+.top-bar {
+  height: 60px;
+  background-color: #4b9376;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* ===================== */
+/* HERO / QUIZ BACKGROUND */
+/* ===================== */
+
+.hero {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* FULL-STRETCH BACKGROUND IMAGE */
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 650%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* DARK OVERLAY */
+.hero::backdrop {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  
+}
+
+/* ===================== */
+/* CHECK-IN QUIZ CARD */
+/* ===================== */
+
+.checkin-container {
+  position: relative;
+  z-index: 3;
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  border-radius: 16px;
+}
+
+/* HEADINGS */
+.checkin-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+/* QUESTIONS */
+.checkin-container label {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* OPTIONS */
+.radio-group {
+  display: grid;
+  gap: 12px;
+}
+
+.radio-group label {
+  background: rgba(255,255,255,0.12);
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.radio-group input {
+  margin-right: 8px;
+}
+
+.radio-group label:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+/* SUBMIT */
+button {
+  width: 100%;
+  margin-top: 32px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #6ab7ff;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #8ac7ff;
+}
+
