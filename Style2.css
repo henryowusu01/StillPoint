@@ -192,3 +192,17 @@ button:hover {
   background: #8ac7ff;
 }
 
+/* grading system design */
+.result {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.emoji {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
