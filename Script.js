@@ -10,57 +10,68 @@
 //_______________________________________________
 
 // Check-in Form Logic  ( basic using emojis and messages as thats what was best fo this project scope)
+// Show user's name
+const name = localStorage.getItem("userFullName");
+if (name) {
+  document.getElementById("welcomeName").textContent = `, ${name}`;
+}
+
+// Handle check-in
 document.getElementById("checkinForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   let score = 0;
 
-  // Mood select
-  const mood = document.querySelector("select").value;
-  if (mood === "Very calm") score += 25;
-  else if (mood === "Calm") score += 20;
-  else if (mood === "Neutral") score += 15;
-  else if (mood === "Stressed") score += 10;
-  else score += 5;
-
-  // Anxiety range
-  const anxiety = document.querySelectorAll("input[type='range']")[0].value;
-  score += 10 - anxiety; // less anxiety = higher score
-
-  // Energy range
-  const energy = document.querySelectorAll("input[type='range']")[1].value;
-  score += energy;
-
-  // Sleep
-  const sleep = document.querySelector("input[name='sleep']:checked").parentElement.textContent;
-  if (sleep.includes("Yes")) score += 20;
-  else if (sleep.includes("Somewhat")) score += 10;
-  else score += 5;
+  for (let i = 1; i <= 10; i++) { // Assuming 10 questions
+    const answer = document.querySelector(`input[name="q${i}"]:checked`);
+    score += Number(answer.value);
+  }
 
   showResult(score);
 });
 
-function showResult(score) {
+function showResult(score) { // Display result based on score from user input
   const result = document.getElementById("result");
   const emoji = document.getElementById("emoji");
   const message = document.getElementById("message");
 
   result.classList.remove("hidden");
 
-  if (score >= 70) {
+  if (score >= 32) {
     emoji.textContent = "😊";
-    message.textContent = "You seem to be doing well today. Keep taking care of yourself.";
+    message.textContent = "You’re doing well today. Keep taking care of yourself.";
+      saveCheckin(score, "😊", message.textContent); 
   } 
-  else if (score >= 50) {
+  else if (score >= 22) {
     emoji.textContent = "😐";
-    message.textContent = "You're feeling okay, but there may be some weight on your mind.";
+    message.textContent = "You’re feeling okay, but there’s a bit of weight today.";
+      saveCheckin(score, "😐", message.textContent);
   } 
-  else if (score >= 35) {
+  else if (score >= 12) {
     emoji.textContent = "😟";
-    message.textContent = "It looks like today has been a bit heavy. Be gentle with yourself.";
+    message.textContent = "Today feels heavy. Be gentle with yourself.";
+    saveCheckin(score, "😟", message.textContent);
   } 
   else {
     emoji.textContent = "😔";
-    message.textContent = "You're going through a tough time. You're not alone.";
+    message.textContent = "You’re having a tough time. You’re not alone.";
+    saveCheckin(score, "😔", message.textContent);
   }
+}
+
+function saveCheckin(score, emoji, message) { // Save check-in data to localStorage
+  const now = new Date();
+
+  const checkin = {
+    date: now.toLocaleDateString(), //
+    time: now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), 
+    score,
+    emoji,
+    message
+  };
+
+  const history = JSON.parse(localStorage.getItem("checkinHistory")) || []; 
+  history.push(checkin);
+
+  localStorage.setItem("checkinHistory", JSON.stringify(history)); //JSON.stringify is to convert object to string
 }

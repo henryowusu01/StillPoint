@@ -406,3 +406,34 @@ button {
 button:hover {
   background: #8ac7ff;
 }
+/*--------------------------------------------------------------------------*/
+/* History */
+
+.history-container {
+  padding: 40px;
+}
+
+.history-item {
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #2b6f57;
+}
+
+.history-emoji {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.history-message {
+  margin-top: 8px;
+  color: #444;
+}

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StillPoint- Main</title>
+    <title>StillPoint - History</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-<div class="app">
+    <div class="app">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
@@ -18,9 +18,9 @@
     </div>
 
     <nav class="nav">
-      <a class="active">Home</a>
+      <a href="Main.html"> Home</a>
       <a href="Check-in.html">Check-In</a>
-      <a href="History.html">History</a>
+      <a class="active">History</a>
       <a>About</a>
     </nav>
 
@@ -30,42 +30,35 @@
 
   </aside>
 
-  <!-- MAIN CONTENT -->
-  <main class="main">
 
-    <!-- TOP BAR -->
+<main class="main">
+
     <header class="top-bar">
-      Welcome {FullName}
+      Your Check-In History
     </header>
+
+   
 
     <!-- HERO IMAGE -->
     <section class="hero">
 
-      <img src="main.jpg" alt="Calm landscape">
+      <img src="moon.jpg" alt="moon">
 
-      <!-- FEATURE CARDS -->
-      <div class="features">
+    </section>
 
-        <div class="feature-card light">
-          Gentle daily<br>check-ins
-        </div>
+    
 
-        <div class="feature-card dark">
-          Private by<br>design
-        </div>
-
-        <div class="feature-card blue">
-          Calm<br>breathing<br>tools
-        </div>
-
-      </div>
-
+    <section class="history-container">
+      <h1>Past Check-Ins</h1>
+      <div id="historyList"></div>
     </section>
 
   </main>
 
 </div>
 
- <script src="script.js"></script>
+<script src="Script.js"></script>
 </body>
+
+
 </html>
