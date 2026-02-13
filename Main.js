@@ -9,11 +9,36 @@
 });
 
 //
+
 const menuBtn = document.getElementById("menuToggle");
 const sidebar = document.querySelector(".sidebar");
 const main = document.querySelector(".main");
 
+sidebar.classList.add("hidden");
+menuBtn.textContent = "☰";
+
 menuBtn.addEventListener("click", () => {
   sidebar.classList.toggle("hidden");
   main.classList.toggle("full");
+
+  // icon logic
+  menuBtn.textContent = isHidden ? "☰" : "///";
 });
+ //Adds time and date to the top of the page and updates every second
+function updateDateTime() {
+  const now = new Date();
+
+  const options = {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+  };
+
+  const date = now.toLocaleDateString(undefined, options);
+  const time = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+
+  document.getElementById("datetime").textContent = `${date} • ${time}`;
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
