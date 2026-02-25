@@ -24,21 +24,7 @@ menuBtn.addEventListener("click", () => {
   // icon logic
   menuBtn.textContent = isHidden ? "☰" : "///";
 });
- //Adds time and date to the top of the page and updates every second
-function updateDateTime() {
-  const now = new Date();
 
-  const options = {
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-  };
-
-  const date = now.toLocaleDateString(undefined, options);
-  const time = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-
-  document.getElementById("datetime").textContent = `${date} • ${time}`;
-}
 
 updateDateTime();
 setInterval(updateDateTime, 1000);

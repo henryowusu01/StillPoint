@@ -177,7 +177,7 @@ body {
 /* ================= SIDEBAR ================= */
 
 .sidebar {
-  width: 220px;
+  width: 250px;
   background-color: #b9f2d6;
   display: flex;
   flex-direction: column;
@@ -248,11 +248,13 @@ body {
 
 /* ================= TOP BAR ================= */
 
-.top-bar {
+.top-bar h1 {
+  margin: 0%;
   height: 60px;
   background-color: #4b9376;
   color: white;
   display: flex;
+  text-align: center;
   align-items: center; ;
   justify-content: center;
   font-size: 1.6rem;
@@ -352,7 +354,20 @@ button:hover {
   background: #508cbd;
 }
 
+/* grading system design */
+.result {
+  margin-top: 30px;
+  text-align: center;
+}
 
+.emoji {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
 
 /* History */
 
