@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StillPoint - History</title>
-    <link rel="stylesheet" href="style.css">
+    <title>History - StillPoint </title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
     
@@ -14,7 +14,7 @@
   <aside class="sidebar">
 
     <div class="logo-box">
-      <img src="logo.png" alt="Stillpoint logo">
+      <img src="images/SPLogo.png" alt="Stillpoint logo">
     </div>
 
     <nav class="nav">
@@ -25,7 +25,7 @@
     </nav>
 
     <footer class="sidebar-footer">
-      <small>copyright<br>signature with<br>year</small>
+      <B> © 2026 StillPoint. All rights reserved.</B>
     </footer>
 
   </aside>
@@ -34,25 +34,76 @@
 <main class="main">
 
     <header class="top-bar">
-       <button id="menuToggle" class="menu-btn">☰</button>
-      Your Check-In History
+      <button id="menuToggle" class="menu-btn">☰</button>
+           Take a quiet moment to notice how you’re feeling <span id="welcomeName"></span>
     </header>
 
-   
-
     <!-- HERO IMAGE -->
-    <section class="hero">
+    <section class="hero2">
 
-      <img src="moon.jpg" alt="moon">
+      <img src="images/SP5.jpg" alt="moon">
+
+      <div class="hero2-content">
+        <h2>About StillPoint</h2>
+
+        <p class="description">StillPoint is a simple mental wellness platform created to encourage people to pause, reflect, and check in with themselves every day.
+          We believe that mental health deserves the same attention as physical health.
+          By taking a few minutes to understand how you're feeling, you can begin to recognize patterns, celebrate positive days, and seek support during more difficult moments.
+          Our goal is to make self-reflection easy, private, and part of everyday life.
+        </p>
+
+        <h2> Why we exist? </h2>
+
+        <p class="description">
+          Mental health is often overlooked, especially in many African communities where conversations about emotional well-being can be difficult.
+          Many people grow up believing they should stay silent about stress, anxiety, or sadness because of fear of judgment or misunderstanding.
+           At StillPoint, we want to help change that by creating a safe and welcoming space where checking in with yourself feels normal, supportive, and free from stigma.
+        </p>
+
+         <h2> Our Vision </h2>
+
+        <p class="description">
+         At StillPoint, our work is guided by five core values:
+
+<br> 1.Compassion – Every person deserves kindness, understanding, and respect.</br>
+     2.Privacy – Your personal check-ins remain yours, and your well-being matters.
+<br> 3.Awareness – Small daily reflections can lead to meaningful personal growth.</br>
+     4.Support – No one should feel alone in their mental health journey.
+<br> 5.Hope – Every new day is an opportunity to heal, grow, and move forward. </br>
+        </p>
+
+        <div class="cardd-container" id="historyStats">
+          <div class="cardd">
+            <h2 id="totalCheckins">0</h2>
+            <p>Total Check-Ins</p>
+          </div>
+
+          <div class="cardd">
+            <h2 id="latestMood">—</h2>
+            <p>Latest Mood</p>
+          </div>
+
+          <div class="cardd">
+            <h2 id="averageScore">0</h2>
+            <p>Average Score</p>
+          </div>
+
+          <div class="cardd">
+            <h2 id="lastCheckin">Never</h2>
+            <p>Last Check-In</p>
+          </div>
+        </div>
+
+        <div class="history-container" id="historyList">
+          <h2>Daily Checkup History</h2>
+          <p class="subtitle">Your previous checkups are listed below, including mood, score, and captured form answers.</p>
+        </div>
+      </div>
 
     </section>
 
-    
+     
 
-    <section class="history-container">
-      <h1>Past Check-Ins</h1>
-      <div id="historyList"></div>
-    </section>
 
   </main>
 

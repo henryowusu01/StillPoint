@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StillPoint- Main</title>
+    <title>Dashboard - StillPoint</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
     
 
     <div class="logo-box">
-      <img src="logo.png" alt="Stillpoint logo">
+      <img src="images/SPLogo.png" alt="Stillpoint logo">
     </div>
 
 
@@ -25,7 +25,12 @@
       <a href="Check-in.html">Check-In</a>
       <a href="History.html">History</a>
       <a href="About.html">About</a>
+
+    <a href="#" id="logoutBtn">Sign Out</a>
+    
+    
     </nav>
+    
 
     <footer class="sidebar-footer">
 
@@ -44,39 +49,86 @@
     <!-- TOP BAR -->
     <header class="top-bar">
       <button id="menuToggle" class="menu-btn">☰</button>
-<span>Welcome to StillPoint <span id="welcomeName"></span></span>
-     <div class="topbar-datetime" id="datetime"></div>
+<span>Welcome <span id="welcomeName"></span></span>
     
     </header>
 
     <!-- HERO IMAGE -->
-    <section class="hero">
+    <section class="dashboard">
 
-      <img src="main.jpg" alt="Calm landscape">
 
-      <!-- FEATURE CARDS -->
-      <div class="features">
+      <div class="card-container">
 
-        <div class="feature-card light">
-          Gentle daily<br>check-ins
+        <div class="card">
+            <h3> 
+                 <a href="Check-in.html">Check In</a>
+        </h3>
+             <p>Take our Daily Check-Up Quiz</p>
+              
         </div>
 
-        <div class="feature-card dark">
-          Private by<br>design
+        <div class="card">
+            <h3> 
+                <a href="History.html">Past Check Up Entries</a>
+            </h3>
+            <p>View all your previous check up to see your journey in mental clarity</p>
         </div>
 
-        <div class="feature-card blue">
-          Calm<br>breathing<br>tools
+        <div class="card">
+
+            <h3>
+              <a href="About.html"> Our Mission </a>
+            </h3>
+            <p>Wonder why we do what we do? <br> Here's the full story </br> </p>
+
+            
         </div>
 
-      </div>
+<div class="cardd-container">
+ <div class="cardd">
+        <h2 id="totalCheckins">0</h2>
+        <p>Total Check-Ins</p>
+    </div>
+
+    <div class="cardd">
+        <h2 id="latestMood">😊</h2>
+        <p>Latest Mood</p>
+    </div>
+
+    <div class="cardd">
+        <h2 id="averageScore">0</h2>
+        <p>Average Score</p>
+    </div>
+
+    <div class="cardd">
+        <h2 id="lastCheckin">Never</h2>
+        <p>Last Check-In</p>
+    </div>
+
 
     </section>
 
-  </main>
+  </main> 
+
+  <div class="popup" id="logoutPopup">
+  <div class="popup-msg">
+  <h2> Sign Out</h2>
+  <p>Are you sure you want to sign out?</p>
+  
+  <div class="popup-choice">
+
+    <button id="yesBtn"> Yes</button>
+    <button id="noBtn"> No</button>
+  </div>
+      
 
 </div>
 
+
+
+
+ </div>
+ 
  <script src="Main.js"></script>
 </body>
 </html>

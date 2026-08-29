@@ -22,7 +22,7 @@ document.getElementById("checkinForm").addEventListener("submit", function (e) {
 
   let score = 0;
 
-  for (let i = 1; i <= 10; i++) { // Assuming 10 questions
+  for (let i = 1; i <= 10; i++) { // Assuming user answers all 10 questions
     const answer = document.querySelector(`input[name="q${i}"]:checked`);
     score += Number(answer.value);
   }
@@ -30,7 +30,7 @@ document.getElementById("checkinForm").addEventListener("submit", function (e) {
   showResult(score);
 });
 
-function showResult(score) { // Display result based on score from user input
+function showResult(score) { // Displays result based on score from user input
   const result = document.getElementById("result");
   const emoji = document.getElementById("emoji");
   const message = document.getElementById("message");
@@ -54,7 +54,7 @@ function showResult(score) { // Display result based on score from user input
   } 
   else {
     emoji.textContent = "😔";
-    message.textContent = "You’re having a tough time. You’re not alone.";
+    message.textContent = " You’re not alone, please talk to a professional or someone you trust. I promise it gets better once you speak";
     saveCheckin(score, "😔", message.textContent);
   }
 }
@@ -63,7 +63,7 @@ function saveCheckin(score, emoji, message) { // Save check-in data to localStor
   const now = new Date();
 
   const checkin = {
-    date: now.toLocaleDateString(), //
+    date: now.toLocaleDateString(), // saves date of interaction
     time: now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), 
     score,
     emoji,
